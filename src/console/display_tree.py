@@ -1,4 +1,6 @@
-"""Summary
+"""The DisplayTree print_tree method is used in the print method of AVLTree.
+
+This is to maintain readable code.
 """
 from __future__ import annotations
 
@@ -10,9 +12,8 @@ from src.tree.node import Node
 
 
 class DisplayTree:
-
-    """Allows the user to easily display the binary tree that they have created.
-    """
+    """Allows the user to easily display the binary tree that they have
+    created."""
 
     def print_tree(
         node: Node,
@@ -20,17 +21,19 @@ class DisplayTree:
         inverted: Optional[bool] = False,
         is_top: Optional[bool] = True,
     ) -> None:
-        """Prints the binary tree to the terminal. The binary tree will be displayed vertically.
-        
+        """Prints the binary tree to the terminal. The binary tree will be
+        displayed vertically.
+
         Args:
-            node (Node): a data structure which stores useful information related to an avl 
-            node_info (Optional[str, Node, Node], optional): The string value of the node's integer 
-            inverted (Optional[bool], optional): Do you want to display the tree top-down or 
-            is_top (Optional[bool], optional): Description
-            (self-balancing) tree.
+            node (Node): A data structure which stores useful information related to an avl tree.
+
+            node_info (Optional[str, Node, Node], optional): The string value of the node's integer
             value.
-            bottom-up.
-        
+
+            inverted (Optional[bool], optional): True to display the tree bottom-up, otherwise, 
+            display the tree top-down.
+
+            is_top (Optional[bool], optional): Check if we are at the top of the tree.
         """
 
         string_value, left_node, right_node = node_info(node)

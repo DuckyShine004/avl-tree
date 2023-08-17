@@ -13,15 +13,14 @@ class Message(Enum):
         NULL_VALUE_EXCEPTION (str): Exception occurs when value is null.
     """
 
-    NULL_VALUE_EXCEPTION = "{value} IS NULL NODE"
-    COMMON_VALUE_EXCEPTION = "NODE {value} IS ALREADY IN THE TREE"
+    NULL_VALUE_EXCEPTION = "PLEASE PROVIDE A NON-EMPTY NODE"
+    COMMON_VALUE_EXCEPTION = "NODE / VALUE IS ALREADY IN THE TREE"
 
-    def print(self, message: str, value: int):
+    def print(message: str):
         """Print the message to the console.
 
         Args:
             message (str): The message or exception to be displayed to the console.
-            value (int): The invalid value.
         """
 
-        print(message.value.format(value=value), "\n")
+        print(message.value, "\n")
