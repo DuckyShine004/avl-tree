@@ -6,7 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 
-class Node:
+class Node(object):
     """The node is a data structure which stores useful information related to
     an avl (self-balancing) tree.
     
